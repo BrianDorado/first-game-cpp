@@ -8,9 +8,9 @@ int main()
     std::cout << "You need to enter the correct codes to continue";
     /* code */
 
-    const int a = 0;
-    const int b = 1;
-    const int c = 2;
+    const int CodeA = 0;
+    const int CodeB = 1;
+    const int CodeC = 2;
 
     const int sum = a+b+c;
     const int product = a*b*c;
