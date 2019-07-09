@@ -20,8 +20,7 @@ bool PlayGame(int DifficultyLevel)
 
   std::cout << "Each code will have three numbers\n";
   std::cout << "The sum of the codes is: " << sum;
-  std::cout << "\nThe codes product is: " << product <<std::endl;
-
+  std::cout << "\nThe product of the codes is: " << product <<std::endl;
 
   int GuessA, GuessB, GuessC;
   std::cin >> GuessA >> GuessB >> GuessC;
@@ -29,7 +28,7 @@ bool PlayGame(int DifficultyLevel)
   int GuessSum = GuessA+GuessB+GuessC;
   int GuessProd = GuessA*GuessB*GuessC;
 
-  if(GuessSum == sum && GuessProd == product) 
+  if (GuessSum == sum && GuessProd == product) 
   {
     std::cout << "\nYou guessed correctly! ;D";
     return true;
@@ -48,16 +47,16 @@ const int MaxDifficulty = 10;
 
 int LevelDifficulty = 1;
 
-  while (LevelDifficulty <= MaxDifficulty)
-  {
+while (LevelDifficulty <= MaxDifficulty)
+{
     bool bLevelComplete = PlayGame(LevelDifficulty);
     std::cin.clear();
     std::cin.ignore();
-  if (bLevelComplete)
-  {
+if (bLevelComplete)
+{
      ++LevelDifficulty;
-  }
-  };
+}
+};
   std::cout << "\n Great work! All levels have been cracked";
-    return 0;
+return 0;
 }
