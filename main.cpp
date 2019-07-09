@@ -28,6 +28,8 @@ bool PlayGame(int DifficultyLevel)
   int GuessSum = GuessA+GuessB+GuessC;
   int GuessProd = GuessA*GuessB*GuessC;
 
+  int AlertLevel = 1;
+
   if (GuessSum == sum && GuessProd == product) 
   {
     std::cout << "\nYou guessed correctly! ;D";
@@ -35,6 +37,7 @@ bool PlayGame(int DifficultyLevel)
   }
   else {
     std::cout << "\nYou guessed incorrectly! :'(";
+    ++AlertLevel
     return false;
   }
 }
