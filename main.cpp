@@ -1,23 +1,24 @@
 #include <iostream>
 
-void PrintIntro()
+void PrintIntro( int LevelDifficulty )
 {
- std:: cout << "\nYou are a secret agent breaking into a secure server room\n You will need to enter the correct codes to continue\n\n";
+ std:: cout << "\n\nYou are a secret agent breaking into a level " << LevelDifficulty;
+ std:: cout << " secure server room\n You will need to enter the correct codes to continue\n\n";
 }
 
-void PlayGame()
+bool PlayGame(int DifficultyLevel)
 {
-  PrintIntro()
+  PrintIntro(DifficultyLevel);
 
   const int CodeA = 0;
   const int CodeB = 1;
   const int CodeC = 2;
 
-  const int sum = a+b+c;
-  const int product = a*b*c;
+  const int sum = CodeA+CodeB+CodeC;
+  const int product = CodeA*CodeB*CodeC;
 
   std::cout << "Each code will have three numbers\n";
-  std::cout << "The codes sum is: ";
+  std::cout << "The sum of the codes is: " << sum;
   std::cout << "\nThe codes product is: " << product <<std::endl;
 
 
@@ -30,19 +31,27 @@ void PlayGame()
   if(GuessSum == sum && GuessProd == product) 
   {
     std::cout << "\nYou guessed correctly! ;D";
+    return true;
   }
   else {
-    std::cout << "\nYou guessed incorrectly! :'("
+    std::cout << "\nYou guessed incorrectly! :'(";
+    return false;
   }
 }
 
 int main()
 {
-  while()
+int LevelDifficulty = 1;
+  while(true)
   {
-    PlayGame()
+    bool bLevelComplete = PlayGame(LevelDifficulty);
     std::cin.clear();
     std::cin.ignore();
+  if (bLevelComplete)
+  {
+     ++LevelDifficulty;
   }
+  };
+  
     return 0;
 }
