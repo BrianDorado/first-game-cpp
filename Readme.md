@@ -10,6 +10,7 @@ Be careful! Guess incorrectly too many times and you will set off the alarms!
 ## Win condition:
 Successfully reach level 10 without setting off any alarms
 
+###### Developer Notes
 To compile:
 cl main.cpp
 
