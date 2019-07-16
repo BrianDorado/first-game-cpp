@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+using namespace std;
 
 void PrintIntro( int LevelDifficulty )
 {
@@ -18,9 +19,9 @@ bool PlayGame(int DifficultyLevel)
   const int sum = CodeA+CodeB+CodeC;
   const int product = CodeA*CodeB*CodeC;
 
-  std::cout << "Each code will have three numbers\n";
-  std::cout << "The sum of the codes is: " << sum;
-  std::cout << "\nThe product of the codes is: " << product <<std::endl;
+  cout << "Each code will have three numbers\n";
+  cout << "The sum of the codes is: " << sum;
+  cout << "\nThe product of the codes is: " << product <<std::endl;
 
   int GuessA, GuessB, GuessC;
   std::cin >> GuessA >> GuessB >> GuessC;
@@ -32,12 +33,12 @@ bool PlayGame(int DifficultyLevel)
 
   if (GuessSum == sum && GuessProd == product) 
   {
-    std::cout << "\nYou guessed correctly! ;D";
+    cout << "\nYou guessed correctly! ;D";
     return true;
   }
   else {
-    std::cout << "\nYou guessed incorrectly! :'(";
-    ++AlertLevel
+    cout << "\nYou guessed incorrectly! :'(";
+    ++AlertLevel;
     return false;
   }
 }
@@ -53,13 +54,13 @@ int LevelDifficulty = 1;
 while (LevelDifficulty <= MaxDifficulty)
 {
     bool bLevelComplete = PlayGame(LevelDifficulty);
-    std::cin.clear();
-    std::cin.ignore();
+    cin.clear();
+    cin.ignore();
 if (bLevelComplete)
 {
      ++LevelDifficulty;
 }
 };
-  std::cout << "\n Great work! All levels have been cracked";
+  cout << "\n Great work! All levels have been cracked";
 return 0;
 }
