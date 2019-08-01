@@ -1,6 +1,8 @@
 #include <iostream>
 #include <ctime>
 
+using namespace std;
+
 void PrintIntro( int LevelDifficulty )
 {
  std:: cout << "\n\nYou are a secret agent breaking into a level " << LevelDifficulty;
